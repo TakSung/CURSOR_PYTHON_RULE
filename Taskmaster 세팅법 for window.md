@@ -205,7 +205,7 @@ cursor://anysphere.cursor-deeplink/mcp/install?name=taskmaster-ai&config=eyJjb21
 
 ```json
 {
-  "servers": {
+  "mcpServers": {
     "taskmaster-ai": {
       "command": "npx",
       "args": ["-y", "--package=task-master-ai", "task-master-ai"],
