@@ -179,11 +179,52 @@ cursor --version
 1. Cursor를 실행합니다
 2. 계정 연결 또는 무료 플랜을 선택합니다
 3. **Settings** (Ctrl+,) → **Model**에서 선호하는 AI 모델을 선택합니다
+다음 링크를 복사하여 브라우저 주소창에 붙여넣고 실행하세요:
+
+```
+cursor://anysphere.cursor-deeplink/mcp/install?name=taskmaster-ai&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIi0tcGFja2FnZT10YXNrLW1hc3Rlci1haSIsInRhc2stbWFzdGVyLWFpIl0sImVudiI6eyJBTlRIUk9QSUNfQVBJX0tFWSI6IllPVVJfQU5USFJPUElDX0FQSV9LRVlfSEVSRSIsIlBFUlBMRVhJVFlfQVBJX0tFWSI6IllPVVJfUEVSUExFWElUWV9BUElfS0VZX0hFUkUiLCJPUEVOQUlfQVBJX0tFWSI6IllPVVJfT1BFTkFJX0tFWV9IRVJFIiwiR09PR0xFX0FQSV9LRVkiOiJZT1VSX0dPT0dMRV9LRVlfSEVSRSIsIk1JU1RSQUxfQVBJX0tFWSI6IllPVVJfTUlTVFJBTF9LRVlfSEVSRSIsIk9QRU5ST1VURVJfQVBJX0tFWSI6IllPVVJfT1BFTlJPVVRFUl9LRVlfSEVSRSIsIlhBSV9BUElfS0VZIjoiWU9VUl9YQUlfS0VZX0hFUkUiLCJBWlVSRV9PUEVOQUlfQVBJX0tFWSI6IllPVVJfQVpVUkVfS0VZX0hFUkUiLCJPTExBTUFfQVBJX0tFWSI6IllPVVJfT0xMQU1BX0FQSV9LRVlfSEVSRSJ9fQo=
+```
 
 ### MCP 설정 인터페이스 접근
-1. **Settings** (Ctrl+Shift+p 혹은 Ctrl+,)를 엽니다
-2. 좌측 사이드바에서 **"MCP"**를 클릭합니다
+1. (Ctrl+Shift+J)를 눌러서 설정 열기
 3. MCP 서버 관리 인터페이스를 확인합니다
+
+# Cursor에서 Task Master AI 설정 가이드
+
+## 1. MCP를 통한 자동 설치 (권장 방법)
+
+
+## 2. 수동 MCP 설정
+
+### 2.1 Cursor 설정 열기
+1. Cursor에서 `Ctrl+Shift+J` (또는 `Cmd+Shift+J` on Mac) 눌러서 설정 열기
+2. 왼쪽 메뉴에서 **MCP** 탭 클릭
+
+### 2.2 MCP 서버 설정
+아래 JSON 설정을 MCP 설정에 추가:
+
+```json
+{
+  "servers": {
+    "taskmaster-ai": {
+      "command": "npx",
+      "args": ["-y", "--package=task-master-ai", "task-master-ai"],
+      "env": {
+        "ANTHROPIC_API_KEY": "YOUR_ANTHROPIC_API_KEY_HERE",
+        "PERPLEXITY_API_KEY": "YOUR_PERPLEXITY_API_KEY_HERE",
+        "OPENAI_API_KEY": "YOUR_OPENAI_KEY_HERE",
+        "GOOGLE_API_KEY": "YOUR_GOOGLE_KEY_HERE",
+        "MISTRAL_API_KEY": "YOUR_MISTRAL_KEY_HERE",
+        "OPENROUTER_API_KEY": "YOUR_OPENROUTER_KEY_HERE",
+        "XAI_API_KEY": "YOUR_XAI_KEY_HERE",
+        "AZURE_OPENAI_API_KEY": "YOUR_AZURE_KEY_HERE",
+        "OLLAMA_API_KEY": "YOUR_OLLAMA_API_KEY_HERE"
+      },
+      "type": "stdio"
+    }
+  }
+}
+```
 
 ---
 
