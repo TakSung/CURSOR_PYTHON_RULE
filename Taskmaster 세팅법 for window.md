@@ -114,6 +114,9 @@ Windows에서 Node.js 버전을 영구적으로 기본값으로 설정하려면:
 # 현재 사용 중인 Node.js 버전을 기본값으로 설정
 # (새 PowerShell 세션에서도 이 버전이 자동으로 활성화됨)
 nvm use 18.20.8
+
+# 디폴트로 지정
+nvm alias default 18.20.8
 ```
 
 ---
