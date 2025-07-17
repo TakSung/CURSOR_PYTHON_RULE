@@ -452,6 +452,18 @@ choco install microsoft-windows-terminal -y
 ```
 
 ---
+# Gemini CLI
+
+```bash
+npx https://github.com/google-gemini/gemini-cil
+npm install -g @google/gemini-cli
+
+gemini
+```
+
+
+
+---
 
 ## 🎯 핵심 포인트 요약
 
