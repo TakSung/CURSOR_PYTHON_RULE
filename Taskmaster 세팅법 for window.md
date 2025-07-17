@@ -181,7 +181,7 @@ cursor --version
 3. **Settings** (Ctrl+,) → **Model**에서 선호하는 AI 모델을 선택합니다
 
 ### MCP 설정 인터페이스 접근
-1. **Settings** (Ctrl+,)를 엽니다
+1. **Settings** (Ctrl+Shift+p 혹은 Ctrl+,)를 엽니다
 2. 좌측 사이드바에서 **"MCP"**를 클릭합니다
 3. MCP 서버 관리 인터페이스를 확인합니다
 
