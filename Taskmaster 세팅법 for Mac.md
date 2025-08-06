@@ -39,13 +39,13 @@ Node.js 18.20.8 버전은 MCP 서버들과의 호환성이 뛰어나며, 장기 
 
 ```bash
 # Node.js 18.20.8 설치
-nvm install 18.20.8
+nvm install 20.19.0
 
 # 기본 버전으로 설정 (새 터미널 세션에서 자동으로 이 버전 사용)
-nvm alias default 18.20.8
+nvm alias default 20.19.0
 
 # 현재 세션에서 18.20.8 사용
-nvm use 18.20.8
+nvm use 20.19.0
 
 # 설치 및 버전 확인
 node --version    # v18.20.8
@@ -137,10 +137,10 @@ Node.js 18.20.8 환경에서 MCP 서버를 수동으로 추가하는 경우, Set
 
 ```bash
 # 현재 터미널 세션에서 Node.js 18.20.8 활성화
-nvm use 18.20.8
+nvm use 20.19.0
 
 # MCP 서버가 이 버전을 사용하는지 확인
-node --version  # v18.20.8이 출력되어야 함
+node --version  # v20.19.0이 출력되어야 함
 
 # Taskmaster AI 패키지가 올바르게 실행되는지 테스트
 npx -y --package=task-master-ai task-master-ai --help
@@ -263,10 +263,10 @@ npx -y --package=task-master-ai task-master-ai --version
 nvm current
 
 # 18.20.8로 변경
-nvm use 18.20.8
+nvm use 20.19.0
 
 # 기본 버전 재설정
-nvm alias default 18.20.8
+nvm alias default 20.19.0
 
 # 새 터미널 세션에서도 올바른 버전이 사용되는지 확인
 # (새 터미널 열고 다음 실행)
